@@ -2,7 +2,15 @@
   body {
     margin: 2rem;
     font: 12px system-ui;
+    font-family: 'Courgette', cursive;    font-size: 20px;
+    font-weight: 800;
+    color: rgb(48, 58, 66);
     background-color: rgb(34, 32, 32);
+  }
+
+  span{
+    text-decoration: underline;
+    color: rgb(24, 25, 29);
   }
 
 .container {
@@ -12,7 +20,7 @@
     /*grid-template-columns: 50px 50px 50px 50px;*/
     grid-template-rows: auto;
     grid-template-areas: 
-      "header header2 header2 header2"
+      "header header header2 header2"
       "main main2 main2 sidebar"
       "footer footer footer footer";
   }
@@ -25,7 +33,9 @@
   }
 
   .container div img {
-    height: 150px;
+    float: left;
+    padding: 20px;
+    height: 250px;
   }
   
   .item1 {
