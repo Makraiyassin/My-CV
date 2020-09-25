@@ -12,51 +12,16 @@
     text-decoration: underline;
     color: rgb(24, 25, 29);
   }
-/*
-  .navbar{
-    margin-right: auto;
-    margin-left: auto;
-    padding: 10px;
-  }
-
-  ul{
-    border-radius: 5px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(80, 65, 42);
-}
-
-  .navbar li{
-    float: left;
-    border-right: 1px solid #bbb;
-}
-
-  .navbar li a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-  .navbar li a:hover {
-    background-color: #111;
-    color: white;
-  }
-
-  .navbar li:last-child {
-    border-right: none;
-  }
-*/
 
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
-    grid-template-rows: auto;
+    /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    grid-template-rows: auto;*/
     grid-template-areas: 
+      "nav  nav nav nav"
       "header header header2 header2"
       "main main2 main2 sidebar"
       "footer footer footer footer";
@@ -68,13 +33,47 @@
     border-radius: 1rem;
     justify-self: stretch;
   }
-
   .container div img {
     float: left;
     padding: 20px;
     height: 250px;
   }
-  
+
+  .container .nav ul{
+    border-radius: 5px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(80, 65, 42);
+    justify-self: stretch;
+
+}
+
+  .container .nav li{
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+  .container .nav li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+  .container .nav li a:hover {
+    background-color: #111;
+  }
+
+  .container .nav li:last-child {
+    border-right: none;
+  }
+
+  .nav{
+    grid-area: nav;
+  }
   .item1 {
     grid-area: header;
   }
@@ -94,11 +93,12 @@
     grid-area: footer;
   }
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1200px) {
     .container {
       grid-template-columns: 1fr;
       grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
       grid-template-areas:
+        "nav"
         "header"
         "header2"
         "main"
@@ -116,6 +116,7 @@
       grid-template-columns: 1fr;
       grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
       grid-template-areas:
+        "nav"
         "header"
         "header2"
         "main"
