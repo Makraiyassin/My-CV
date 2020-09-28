@@ -8,7 +8,7 @@ body {
     color: rgb(48, 58, 66);
     background-color: rgb(34, 32, 32);
   }
-
+  
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -71,18 +71,23 @@ body {
   }
 
   #fname{
+    margin-left: 20%;
     grid-area: header;
   }
 
   #lname{
+    margin-left: 18%;
     grid-area: header2;
   }
 
-  #contry{
+  #country{
+    margin-left: 20%;
     grid-area: main;
   }
 
   #subject{
+    margin-left: 23.5%;
+    margin-top: 2px;
     grid-area: main2;
   }
 
