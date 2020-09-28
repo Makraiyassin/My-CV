@@ -1,0 +1,97 @@
+
+body {
+    margin: 2rem;
+    font: 12px system-ui;
+    font-family: 'Courgette', cursive;    
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(48, 58, 66);
+    background-color: rgb(34, 32, 32);
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    grid-template-areas: 
+      "nav"
+      "header"
+      "header2"
+      "main"
+      "main2"
+      "footer";
+  }
+
+  .container div{
+    background: #EDE7F6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .container form{
+    background: #EDE7F6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+  
+  .container .nav ul{
+    border-radius: 5px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(80, 65, 42);
+    justify-self: stretch;
+
+}
+
+  .container .nav li{
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+  .container .nav li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+  .container .nav li a:hover {
+    background-color: #111;
+  }
+
+  .container .nav li:last-child {
+    border-right: none;
+  }
+
+  .nav{
+    grid-area: nav;
+  }
+
+  #fname{
+    grid-area: header;
+  }
+
+  #lname{
+    grid-area: header2;
+  }
+
+  #contry{
+    grid-area: main;
+  }
+
+  #subject{
+    grid-area: main2;
+  }
+
+#submit{
+    background-color: rgb(80, 65, 42);
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-family: 'Courgette', cursive;    
+    font-size: 20px;
+}
